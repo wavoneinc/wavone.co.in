@@ -9,9 +9,9 @@
     <meta name="author" content="">
 
     <title>wavone</title>
-
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <link href="//db.onlinewebfonts.com/c/53e116a0324342feffbaa5a1ff49b5c1?family=MAWNS+Handwriting" rel="stylesheet" type="text/css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
@@ -34,10 +34,7 @@
 
         <section class="hero" id="hero">
             <div class="heroText">
-                <h1 style="font-family: 'MAWNS Handwriting';" class="text-white mt-5 mb-lg-4" data-aos="zoom-in"
-                    data-aos-delay="800">
-                    Wavone
-                </h1>
+                <img  src="images/wavonetitle.png" alt="wavone Image">
 
                 <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
                     Create a new vision with us
@@ -284,13 +281,21 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-12 col-12">
+                </div><br><br><br>
+                <div class="row">
+                    <div class="col-md-4">
+                     
+                    </div>
+                    <div class="col-md-4">
+                        <h4 style="text-align: center;" class="portfolio-title mb-0">Youtube Tutorial </h4><br>
                         <div class="videoWrapper">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oUOIpBcXuFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe style=" width: 100%;
+                            aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/oUOIpBcXuFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
-
+                    <div class="col-md-4">
+                       
+                    </div>
                 </div>
             </div>
         </section>
@@ -301,33 +306,34 @@
 
                     <div class="col-12">
                         <h2 class="mb-5 text-center" data-aos="fade-up">Vision</h2>
+                        <h6>“MOST COMPETITIVE, PRODUCTIVE, VISIBLE & VALUE-ADDED BUSINESS PARTNER”.
+
+                            Strategy to achieve Vision</h6>
+                        <p>WAVONE facilitates to bring about the competitive advantage which lies in management’s ability to
+                            consolidate corporate-wide technologies and production skills through highly developed employee
+                            skills & Quality workforce.
+    
+                            From being key players in our respective regions, we had a chance to play at a higher level and
+                            be the strongest competitor. We have our eyes on the future, constantly looking ahead to
+                            determine how it can pave the way to empower engineers and transform possibilities to
+                            opportunities. We believe that what we can achieve is limitless.</p>
+                        <br>
+                        <h6>SOLUTIONS</h6>
+    
+                       <p> With you, we have an opportunity to transform the market, possibilities and even lives, and to us
+                        this was an opportunity worth seizing. Soon to be India’s leading AEC & technology solutions
+                        provider to the Architecture, Engineering and Construction (Building & Infrastructure industries)
+                        with an enviable experience staff.</p>
+                        <br><br>
+                        <h6>BIM Training
+                        </h6>
+                         <p> With the right training, you can reduce errors and omissions in your project. Virtual design and
+                        construction with BIM create the potential to identify problems earlier in the building process. </p>
                     </div>
 
 
 
-                    <h6>“MOST COMPETITIVE, PRODUCTIVE, VISIBLE & VALUE-ADDED BUSINESS PARTNER”.
-
-                        Strategy to achieve Vision</h6>
-                    <p>WAVONE facilitates to bring about the competitive advantage which lies in management’s ability to
-                        consolidate corporate-wide technologies and production skills through highly developed employee
-                        skills & Quality workforce.
-
-                        From being key players in our respective regions, we had a chance to play at a higher level and
-                        be the strongest competitor. We have our eyes on the future, constantly looking ahead to
-                        determine how it can pave the way to empower engineers and transform possibilities to
-                        opportunities. We believe that what we can achieve is limitless.</p>
-                    <br>
-                    <h6>SOLUTIONS</h6>
-
-                    With you, we have an opportunity to transform the market, possibilities and even lives, and to us
-                    this was an opportunity worth seizing. Soon to be India’s leading AEC & technology solutions
-                    provider to the Architecture, Engineering and Construction (Building & Infrastructure industries)
-                    with an enviable experience staff.
-                    <br><br>
-                    <h6>BIM Training
-                    </h6>
-                    With the right training, you can reduce errors and omissions in your project. Virtual design and
-                    construction with BIM create the potential to identify problems earlier in the building process.
+                    
                 </div>
             </div>
         </section>
@@ -353,14 +359,14 @@
                                     <input type="text" name="name" id="name" class="form-control"
                                         placeholder="Full name" required>
                                 </div>
-
+                                <br><br><br>
                                 <div class="col-lg-6 col-6">
                                     <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
 
                                     <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
                                         class="form-control" placeholder="Email address" required>
                                 </div>
-                                <br>
+                              
                                 <div class="col-lg-6 col-6">
                                     <label for="name" class="form-label">WhatsApp Number <sup class="text-danger">*</sup></label>
 
@@ -421,9 +427,10 @@
                             </div>
 
                             <div class="col-lg-5 col-12 mx-auto mt-5">
-                                <button type="submit" class="form-control">Send Message</button>
+                                <button  id="form-button" type="submit" class="form-control">Send Message</button>
+                                <p id="my-form-status"></p>
                             </div>
-                            <p id="my-form-status"></p>
+                          
                         </form>
                     </div>
 
@@ -502,6 +509,7 @@
             }
           }).then(response => {
             if (response.ok) {
+              document.getElementById('form-button').style.display = 'none';
               status.innerHTML = "Thanks for your submission!";
               form.reset()
             } else {
